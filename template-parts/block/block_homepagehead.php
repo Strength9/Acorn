@@ -7,7 +7,7 @@ Block SVG: block_template.svg
 Block Category: acorn
 */
 
-$sectionclass = 'homeintro';
+$sectionclass = 'homeintro'; 
 
 /* --------------------------------------------------------------------------- */
 if( !empty( $block['data']['_is_preview'] ) ) {

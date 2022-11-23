@@ -172,10 +172,9 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -184,9 +183,7 @@ select {
 }
 html {
   font-size: 100%;
-}
-
-/*16px*/
+} /*16px*/
 body {
   width: 100%;
   height: 100%;
@@ -684,7 +681,7 @@ header .navgrid nav ul li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 700px;
+  min-height: 900px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -699,7 +696,7 @@ header .navgrid nav ul li {
 }
 @media only screen and (min-width: 600px) {
   .herobanner {
-    height: 900px;
+    height: 1100px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -728,6 +725,16 @@ header .navgrid nav ul li {
     grid-template-areas: "highlights videodisp";
   }
 }
+@media only screen and (min-width: 850px) {
+  .herobanner .herodouble {
+    max-width: 1190px;
+    grid-template-columns: 1fr 500px;
+    grid-template-rows: 1fr;
+    gap: 0px 50px;
+    grid-auto-flow: row;
+    grid-template-areas: "highlights videodisp";
+  }
+}
 .herobanner .herodouble .videodisp {
   grid-area: videodisp;
 }
@@ -743,6 +750,14 @@ header .navgrid nav ul li {
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+.herobanner .herodouble .highlights > div {
+  max-width: 100%;
+  overflow: hidden;
+}
+.herobanner .herodouble .highlights > div .ti-reviews-container-wrapper {
+  max-width: 450px !important;
+  margin: auto;
 }
 .herobanner .herosingle {
   width: 98%;
@@ -2552,29 +2567,25 @@ section div.introdiv.larger p {
 .getintouch .contactgrid .contactform .wpforms-container form p.antispam, .getintouch .contactgrid .contactform .wpforms-container-full form p.antispam {
   display: none;
 }
-.getintouch .contactgrid .contactform .wpforms-container form ::-webkit-input-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
+.getintouch .contactgrid .contactform .wpforms-container form ::-webkit-input-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;
   font-style: normal;
 }
-.getintouch .contactgrid .contactform .wpforms-container form ::-moz-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form ::-moz-placeholder {
-  /* Firefox 19+ */
+.getintouch .contactgrid .contactform .wpforms-container form ::-moz-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form ::-moz-placeholder { /* Firefox 19+ */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;
   font-style: normal;
 }
-.getintouch .contactgrid .contactform .wpforms-container form :-ms-input-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form :-ms-input-placeholder {
-  /* IE 10+ */
+.getintouch .contactgrid .contactform .wpforms-container form :-ms-input-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form :-ms-input-placeholder { /* IE 10+ */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;
   font-style: normal;
 }
-.getintouch .contactgrid .contactform .wpforms-container form :-moz-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form :-moz-placeholder {
-  /* Firefox 18- */
+.getintouch .contactgrid .contactform .wpforms-container form :-moz-placeholder, .getintouch .contactgrid .contactform .wpforms-container-full form :-moz-placeholder { /* Firefox 18- */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;
@@ -3005,8 +3016,8 @@ section div.introdiv.larger p {
   margin-left: -250px;
   top: 50%;
   margin-top: -200px;
-  background-color: #fcead7;
-  border: 3px solid #f19103;
+  background-color: rgb(252, 234, 215);
+  border: 3px solid rgb(241, 145, 3);
   padding: 25px;
   width: 90%;
   max-width: 500px;
@@ -3069,32 +3080,28 @@ section div.introdiv.larger p {
 #modalup .formholder form p.antispam {
   display: none;
 }
-#modalup .formholder form input::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
+#modalup .formholder form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
 }
-#modalup .formholder form input::-moz-placeholder {
-  /* Firefox 19+ */
+#modalup .formholder form input::-moz-placeholder { /* Firefox 19+ */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
 }
-#modalup .formholder form input:-ms-input-placeholder {
-  /* IE 10+ */
+#modalup .formholder form input:-ms-input-placeholder { /* IE 10+ */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
 }
-#modalup .formholder form input:-moz-placeholder {
-  /* Firefox 18- */
+#modalup .formholder form input:-moz-placeholder { /* Firefox 18- */
   color: #026734;
   font-family: "Gotham";
   font-weight: 500;

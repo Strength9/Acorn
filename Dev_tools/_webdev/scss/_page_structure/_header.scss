@@ -520,7 +520,7 @@ header {
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position: center center;
-	min-height:700px;
+	min-height:900px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -529,7 +529,7 @@ header {
 	align-items: center;
 	  
 		@media only screen and (min-width: 600px) {
-			height:900px;
+			height:1100px;
 		}
 	
 		@media only screen and (min-width: 1200px) {
@@ -557,6 +557,16 @@ header {
 				  grid-template-areas:
 					"highlights videodisp";
 			}
+			
+			@media only screen and (min-width:850px) {
+				max-width:$contentwidth;
+				grid-template-columns: 1fr 500px;
+				  grid-template-rows: 1fr;
+				  gap: 0px 50px;
+				  grid-auto-flow: row;
+				  grid-template-areas:
+					"highlights videodisp";
+			}
 
 		.videodisp { 
 			grid-area: videodisp; 
@@ -577,6 +587,16 @@ header {
 			justify-content: center;
 			align-content: center;
 			align-items: center;
+			
+			>div {
+				max-width:100%;
+				overflow:hidden;
+				.ti-reviews-container-wrapper {
+					max-width:450px !important;
+					margin:auto;
+				}
+				
+			}
 		}
 		
 		
