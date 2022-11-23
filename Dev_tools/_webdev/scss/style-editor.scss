@@ -1,0 +1,74 @@
+@import '_global';
+
+/* Admin Fixes For Dashboard */
+body.admin-bar #branding-wrap{top: 28px;} 
+body.admin-bar #wrapper{margin-top: 145px;}
+body.logged-in .wrap.woocomerce .mainform {margin-top: 145px;}
+
+// Make the edit screen full width
+.wp-block { padding:0 50px; max-width:none;  }
+ 
+@import '_global';
+
+    @import '_design_styles/fonts';  
+    @import '_design_styles/base';     
+    @import '_design_styles/animated';     
+    @import '_page_structure/header';      
+    @import '_page_structure/footer';  
+    @import '_customs_partials/paritals'; // Global Designs
+    @import '_customs_partials/calltoactions';
+    
+    @import '_customs_partials/blocks';
+    
+    @import '_design_styles/slicktheme';  
+    @import '_design_styles/modal';  
+   
+    
+.fade-in {
+  opacity: 0;
+  transform: translateY(100px);
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+#tinymce {
+  padding-top:0 !important;
+}
+
+#lenders_repeater, #insurers_repeater {
+display:block;
+  margin:auto;
+  height:150px;
+  width:199px;
+  overflow:hidden;
+      img {
+        display: block;
+        
+          filter: grayscale(100%);
+          
+          &:hover {
+            filter: grayscale(0%);
+          }
+        
+      }
+      @media only screen and (min-width:440px) {
+        width:400px !important;
+      }
+      @media only screen and (min-width:640px) {
+        width:600px !important;
+      }
+      @media only screen and (min-width:840px) {
+        width:800px !important;
+      }
+      @media only screen and (min-width:1040px) {
+        width:800px !important;
+      }
+      @media only screen and (min-width:1640px) {
+        width:1200px !important;
+      }
+  
+  div {
+    display:inline-block;
+  }
+}

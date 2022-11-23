@@ -1,0 +1,245 @@
+footer {
+	background-color:$orange;
+
+	.legaldisclaimer {
+		width:100%;
+		max-width:$contentwidth;
+		margin:0 auto;
+		
+		
+			h3 {
+				font-family: "Gotham";
+				font-weight: 500;
+				font-style: normal;
+				margin: 0 0 20px;
+				padding: 0;
+				font-size: 32px;
+				color: #026734 !important;
+			}
+			p {
+				color:#FFF;
+				margin: 0 0 20px;
+				padding: 0;
+				font-family: "Gotham Book";
+				font-weight: normal;
+				font-style: normal;
+				
+				strong {
+					color: $green;
+					font-family: "Gotham";
+					font-weight: 500;
+					font-style: normal;
+				}
+			}
+
+		@include areapadding();
+		
+		
+	}
+	.menucontainer {
+		
+		width:100%;
+		max-width:$contentwidth;
+		margin:0 auto;
+		padding:0;
+		display:grid; 
+		grid-template-columns: 1fr;  
+		grid-template-rows: minmax(0px,auto); 
+		gap: 0px 0px; 
+		grid-template-areas: "branding"; 
+		
+		.branding { grid-area: branding; }
+		.menu1 { display:none; }
+		.menu2 { display:none; }
+		.menu3 { display:none; }
+		
+		img {width:216px; margin:0 auto 25px;}
+		p {
+			margin:0 auto;
+			padding:0;
+			text-align:center;
+			
+			a {
+				font-family: "Gotham";
+				font-weight:300;
+				font-size:32px;
+				line-height:32px;
+				color:#FFF;
+				text-decoration: none;
+				
+				&:hover {
+					color:$green;
+				}
+			}
+		}
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				
+				color: #fff;
+				margin: 0 0 6px;
+				padding: 0;
+				font-family: "Gotham Book";
+				font-weight: 400;
+				font-style: normal;
+				font-size: 14px;
+				
+				a {
+					color:#FFF;
+					text-decoration: none;
+					
+					&:hover {
+						color:$green;
+					}
+				}
+				
+				&:first-child {
+					font-family: "Gotham";
+					font-weight:normal;
+					font-size:16px;
+					a {
+						&:hover {
+							color:#FFF;
+						}
+					}
+				}
+				
+			}
+		}
+		
+		@media only screen and (min-width:800px) {
+			grid-template-columns: 29% 24% 24% 24%;
+			  grid-template-rows: 1fr; 
+			  gap: 0px 0px; 
+			  grid-template-areas: "branding menu1 menu2 menu3"; 
+			.menu1 { grid-area: menu1; display:block;}
+			.menu2 { grid-area: menu2; display:block;}
+			.menu3 { grid-area: menu3; display:block;}
+			
+			img {width:180px; margin:0 auto 45px 0;}
+			p {font-size:24px; line-height:24px;text-align:left;}
+		}
+		
+		@media only screen and (min-width:1050px) {
+			grid-template-columns: 34% 22% 22% 22%;
+			
+			p {font-size:32px; line-height:32px;text-align:left;}
+		}
+		
+		@include areapadding();
+		
+	}
+	.copyrightbar {
+		
+		background-color:$green;
+		
+		.container {
+			width:100%;
+			max-width:$contentwidth;
+			margin:0 auto;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: minmax(0,auto);
+			gap: 0px 0px;
+			grid-auto-flow: row;
+			grid-template-areas: "socials" "copybar" ;
+			
+			.copybar { 
+				grid-area: copybar; 
+				text-align: center;
+				ul {
+					list-style:none;
+					margin:0;
+					padding:0;
+					
+					li {
+						display:block;
+						margin:0 0 0 0;
+						
+						&:last-child {margin:0;}
+						a {
+							line-height:30px;
+							font-size:14px;
+							color:#FFF;
+							text-decoration:none;
+							
+							&:hover {
+								color:$orange;
+							}
+						}
+					}
+				}
+			}
+			
+			.socials { 
+				grid-area: socials;
+				text-align:center;
+				ul {
+					list-style:none;
+					margin:0;
+					padding:0;
+					
+					li {
+						display:inline-block;
+						margin:0 0 0 10px;
+						
+						span {display:none;}
+						a {
+							line-height:30px !important;
+							font-size:30px;
+							color:#FFF;
+							text-decoration:none;
+							
+							&:hover {
+								color:$orange;
+							}
+						}
+					}
+				}
+			 }
+			
+			@media only screen and (min-width:450px) {
+				
+				
+				.copybar { 
+					ul {
+						li {
+							display:inline-block;
+							&:first-child{
+								margin-right:10px;
+							}
+						}
+					}
+				}
+				
+			}
+			
+			@media only screen and (min-width:768px) {
+				grid-template-columns: 1fr 250px;
+				grid-template-rows: minmax(0,auto);
+				grid-template-areas: "copybar socials";
+				
+				.copybar { 
+					text-align:left;
+					li {
+						a {
+							line-height:30px !important;
+						}
+					}
+				}
+				
+				.socials { 
+					text-align:right;
+				 }
+			}
+			
+			@include areapadding();
+
+		}
+		
+	}
+
+}
+ 

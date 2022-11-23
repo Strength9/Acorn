@@ -1,0 +1,44 @@
+/*!
+Theme Name: Acorn
+Theme URI: https://strength9.co.uk
+Description: XRAY Naked Base Theme
+Author: Dave Pratt
+Author URI: https://strength9.co.uk
+Version: 1.0.1
+Text Domain: xray
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: naked, bare, quick
+
+*/
+
+$smallcontent: 1100px;
+$contentwidth:1190px;
+$neutral : rgba(246, 242, 235, 1);
+$Basecolor: #162c52;
+$linkcol : Black;
+$slickarrowcolor: red;
+
+$orange : #f19103;
+$medorange: #f2af4c;
+$green : #026734;
+$peach:  rgba(241, 145, 2, 0.2);
+
+$timing: .4s ;
+$ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
+
+
+
+@mixin areapadding {
+	padding:68px 20px;
+	@media only screen and (min-width:1220px) {
+		padding:68px 0px;
+	}
+}
+
+@mixin normalfont {
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
