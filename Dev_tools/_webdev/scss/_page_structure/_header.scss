@@ -538,46 +538,19 @@ header {
 		
 	.herodouble {  
 		width:98%;
-		max-width:550px;
+		
 		margin:0 auto;
 		display: grid;
   		grid-template-columns: 1fr;
   		grid-template-rows: minmax(0px,auto) minmax(0px,auto);
   		gap: 30px 0px;
   		grid-auto-flow: row;
-  		grid-template-areas:
-			"highlights" "videodisp";
-
-			@media only screen and (min-width:850px) {
-				max-width:$contentwidth;
-				grid-template-columns: 1fr 1fr;
-				  grid-template-rows: 1fr;
-				  gap: 0px 50px;
-				  grid-auto-flow: row;
-				  grid-template-areas:
-					"highlights videodisp";
-			}
-			
-			@media only screen and (min-width:850px) {
-				max-width:$contentwidth;
-				grid-template-columns: 1fr 500px;
-				  grid-template-rows: 1fr;
-				  gap: 0px 50px;
-				  grid-auto-flow: row;
-				  grid-template-areas:
-					"highlights videodisp";
-			}
-
+  		grid-template-areas: "highlights" "videodisp";
+		  
+		  
 		.videodisp { 
 			grid-area: videodisp; 
-		
-			video {
-				width:100%;
-				margin:auto;
-			}
-		
-		
-		
+			video { width:100%; margin:auto; }
 		}
 		.highlights { 
 			grid-area: highlights; 
@@ -588,16 +561,57 @@ header {
 			align-content: center;
 			align-items: center;
 			
-			>div {
-				max-width:100%;
+			div.review {
+				max-width:260px;
 				overflow:hidden;
+				
 				.ti-reviews-container-wrapper {
 					max-width:450px !important;
 					margin:auto;
 				}
 				
+				@media only screen and (min-width:400px) {
+					max-width:360px;
+				}
+				
+								
+				@media only screen and (min-width:700px) {
+					max-width:500px;
+				}
+				@media only screen and (min-width:850px) {
+					max-width:300px;
+				}
+												
+				@media only screen and (min-width:1000px) {
+					max-width:98%;
+				}
 			}
-		}
+		}  
+		  
+		  
+			
+			@media only screen and (min-width:850px) {
+				max-width:$contentwidth;
+				grid-template-columns: 350px 1fr;
+				  grid-template-rows: 1fr;
+				  gap: 0px 20px;
+				  grid-auto-flow: row;
+				  grid-template-areas:
+					"highlights videodisp";
+			}
+
+			@media only screen and (min-width:1000px) {
+				max-width:$contentwidth;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr;
+				gap: 0px 50px;
+				grid-auto-flow: row;
+				grid-template-areas: "highlights videodisp";
+			}
+			
+			
+
+
 		
 		
 }
@@ -703,7 +717,7 @@ ul.contactheaders {
 	padding:0;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
