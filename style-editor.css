@@ -716,6 +716,12 @@ header .navgrid nav ul li {
 }
 .herobanner .herodouble .videodisp {
   grid-area: videodisp;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 .herobanner .herodouble .videodisp video {
   width: 100%;
