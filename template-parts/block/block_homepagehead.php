@@ -76,7 +76,7 @@ if (get_field('show_video') === 'yes' ) {
 	$hout = '<div class="herodouble"><div class="highlights">'.$headtext.$reviewcode.' </div><div class="videodisp"><div class="vd">'.$videohtml.$contactlinksblock.'</div></div></div>';
 
 } else {
-	$hout = '<div class="herosingle"><div class="highlights">'.$headtext.$reviewcode .$contactlinksblock.'</div></div>';
+	$hout = '<div class="herosingle"><div class="highlights">'.$headtext.$contactlinksblock.'</div></div>';
 };
 
 
