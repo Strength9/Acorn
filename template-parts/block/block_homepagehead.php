@@ -70,7 +70,8 @@ if (get_field('single_header_text') === 'yes' ) {
 	
 };
 
-$reviewcode = '<div class="review">'.do_shortcode('[trustindex data-widget-id=ef56d0c10f7c59515c1676c46f0]').'</div>';
+
+$reviewcode = '<div class="review">'.do_shortcode('[trustindex no-registration=google]').'</div>';
 if (get_field('show_video') === 'yes' ) {
 	$hout = '<div class="herodouble"><div class="highlights">'.$headtext.$reviewcode.' </div><div class="videodisp"><div class="vd">'.$videohtml.$contactlinksblock.'</div></div></div>';
 
